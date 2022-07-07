@@ -1,75 +1,687 @@
-const ratePlans = {
+const result = {
   result: true,
   data: {
-    Rooms: [
+    Inventories: [
       {
-        RoomId: "1500c17f-5936-1552017829-4198-b8d3-02c19ec07304",
-        Name: "Traveliko - Deluxe Room",
-        RatePlans: [
+        RoomId: "1231241516",
+        Availabilities: [
           {
-            RatePlanId: "07b9a897-ed07-1552017844-4696-9830-b50500e203b6",
-            Name: "Deluxe Room - Best Available Rate",
-            GuestsIncluded: 1,
-            AdultGuestsIncluded: 1,
-            ChildGuestsIncluded: 0,
-            MaxGuests: 1,
-            ExtraGuestsConfig: "ADULT_CHILD",
-            MinRoomRate: 0,
-            MealsIncluded: {
-              Breakfast: true,
-              Lunch: false,
-              Dinner: false,
-              AllInclusive: false,
+            DateRange: {
+              From: "2022-05-19T00:00:00",
+              To: "2022-05-19T00:00:00",
             },
-            LastMinuteDefault: {
-              NumberDaysInAdvance: 0,
-              ValueChange: "INCREASE",
-              ValueType: "FIXED_AMOUNT",
-              Amount: 0,
+            Quantity: 3,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-05-20T00:00:00",
+              To: "2022-05-20T00:00:00",
             },
-            BookingCondition: {
-              BookingConditionId: "756f287d-e3da-4e2d-9f4f-85085ac2fa5b",
-              DepositType: 0,
-              CancellationRules: [
-                {
-                  PolicyId: "2c7401d4-67e5-1526373225-44c1-b937-618ea46cc8a4",
-                  DaysPriorCheckin: -1,
-                  PenaltyType: 2,
-                  PenaltyAmount: 20,
-                  Action: "Get",
-                },
-                {
-                  PolicyId: "a52bbbc7-641a-1526373225-4a80-a9bc-ef714a69e475",
-                  DaysPriorCheckin: 0,
-                  PenaltyType: 3,
-                  PenaltyAmount: 0,
-                  Action: "Get",
-                },
-                {
-                  PolicyId: "cc2715ba-e375-1526373319-41e1-aaa2-ca810c006d12",
-                  DaysPriorCheckin: 1,
-                  PenaltyType: 1,
-                  PenaltyAmount: 50,
-                  Action: "Get",
-                },
-                {
-                  PolicyId: "bc1e147a-b5ef-1526373508-40cc-9aa3-5ef3dcb059f9",
-                  DaysPriorCheckin: 2,
-                  PenaltyType: 0,
-                  PenaltyAmount: 0,
-                  Action: "Get",
-                },
-              ],
-              Action: "Get",
+            Quantity: 2,
+            ReleasePeriod: 1,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-05-21T00:00:00",
+              To: "2022-05-21T00:00:00",
             },
-            RoomId: "1500c17f-5936-1552017829-4198-b8d3-02c19ec07304",
-            Inclusions: "NOT_USED",
-            InclusionsName: "",
-            InclusionsDescription: "",
-            Order: 803,
+            Quantity: 4,
+            ReleasePeriod: 1,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-05-22T00:00:00",
+              To: "2022-05-22T00:00:00",
+            },
+            Quantity: 6,
+            ReleasePeriod: 1,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-05-23T00:00:00",
+              To: "2022-05-24T00:00:00",
+            },
+            Quantity: 5,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-05-25T00:00:00",
+              To: "2022-05-25T00:00:00",
+            },
+            Quantity: 10,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-05-26T00:00:00",
+              To: "2022-05-26T00:00:00",
+            },
+            Quantity: 0,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-05-27T00:00:00",
+              To: "2022-05-27T00:00:00",
+            },
+            Quantity: 15,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-05-28T00:00:00",
+              To: "2022-05-29T00:00:00",
+            },
+            Quantity: 1,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-05-30T00:00:00",
+              To: "2022-05-30T00:00:00",
+            },
+            Quantity: 16,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-05-31T00:00:00",
+              To: "2022-06-01T00:00:00",
+            },
+            Quantity: 1,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-02T00:00:00",
+              To: "2022-06-02T00:00:00",
+            },
+            Quantity: 0,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-03T00:00:00",
+              To: "2022-06-09T00:00:00",
+            },
+            Quantity: 1,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-10T00:00:00",
+              To: "2022-06-10T00:00:00",
+            },
+            Quantity: 16,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-11T00:00:00",
+              To: "2022-06-11T00:00:00",
+            },
+            Quantity: 18,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-12T00:00:00",
+              To: "2022-06-13T00:00:00",
+            },
+            Quantity: 1,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-14T00:00:00",
+              To: "2022-06-16T00:00:00",
+            },
+            Quantity: 17,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-17T00:00:00",
+              To: "2022-06-17T00:00:00",
+            },
+            Quantity: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-18T00:00:00",
+              To: "2022-06-20T00:00:00",
+            },
+            Quantity: 1,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-21T00:00:00",
+              To: "2022-06-21T00:00:00",
+            },
+            Quantity: 15,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-22T00:00:00",
+              To: "2022-06-22T00:00:00",
+            },
+            Quantity: 18,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-23T00:00:00",
+              To: "2022-06-27T00:00:00",
+            },
+            Quantity: 1,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-28T00:00:00",
+              To: "2022-06-28T00:00:00",
+            },
+            Quantity: 16,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-29T00:00:00",
+              To: "2022-06-29T00:00:00",
+            },
+            Quantity: 66,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-06-30T00:00:00",
+              To: "2022-06-30T00:00:00",
+            },
+            Quantity: 44,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-07-01T00:00:00",
+              To: "2022-07-06T00:00:00",
+            },
+            Quantity: 12,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-07-07T00:00:00",
+              To: "2022-07-09T00:00:00",
+            },
+            Quantity: 0,
+            ReleasePeriod: 0,
+            Action: "",
+          },
+          {
+            DateRange: {
+              From: "2022-07-10T00:00:00",
+              To: "2022-07-31T00:00:00",
+            },
+            Quantity: 12,
+            ReleasePeriod: 0,
+            Action: "",
           },
         ],
-        Order: 1,
+        RatePackages: [
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 1300,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            StopSell: 0,
+            DateRange: {
+              From: "2022-05-19T00:00:00",
+              To: "2022-05-19T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 1400,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            StopSell: 0,
+            DateRange: {
+              From: "2022-05-20T00:00:00",
+              To: "2022-05-20T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 1500,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            StopSell: 0,
+            DateRange: {
+              From: "2022-05-21T00:00:00",
+              To: "2022-05-21T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 1600,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            StopSell: 0,
+            DateRange: {
+              From: "2022-05-22T00:00:00",
+              To: "2022-05-22T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 1000,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            StopSell: 0,
+            DateRange: {
+              From: "2022-05-23T00:00:00",
+              To: "2022-05-23T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2000,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            MinNights: 2,
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            StopSell: 0,
+            DateRange: {
+              From: "2022-05-24T00:00:00",
+              To: "2022-05-24T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 3000,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            MinNights: 2,
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            StopSell: 0,
+            DateRange: {
+              From: "2022-05-25T00:00:00",
+              To: "2022-05-25T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2500,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            MinNights: 2,
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            StopSell: 0,
+            DateRange: {
+              From: "2022-05-26T00:00:00",
+              To: "2022-05-26T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 1888,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            MinNights: 2,
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            StopSell: 0,
+            DateRange: {
+              From: "2022-05-27T00:00:00",
+              To: "2022-05-27T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2500,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            MinNights: 2,
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            DateRange: {
+              From: "2022-05-28T00:00:00",
+              To: "2022-05-29T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2500,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            DateRange: {
+              From: "2022-05-30T00:00:00",
+              To: "2022-05-31T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2500,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            StopSell: 0,
+            DateRange: {
+              From: "2022-06-01T00:00:00",
+              To: "2022-06-18T00:00:00",
+            },
+          },
+          {
+            RatePlanId: "1213123123",
+            Rate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Value: 2500,
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraAdultRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            ExtraChildRate: {
+              Amount: {
+                Type: "FIXED_AMOUNT",
+                Currency: "USD",
+              },
+              Action: "",
+            },
+            CloseToArrival: 0,
+            CloseToDeparture: 0,
+            DateRange: {
+              From: "2022-06-19T00:00:00",
+              To: "2022-07-31T00:00:00",
+            },
+          },
+        ],
       },
     ],
   },
@@ -77,41 +689,27 @@ const ratePlans = {
   error: 0,
 };
 
-const room = {
-  roomId: "1500c17f-5936-1552017829-4198-b8d3-02c19ec07304",
-  name: "Traveliko - Deluxe Room",
-  ratePlans: [
-    {
-      ratePlanId: "07b9a897-ed07-1552017844-4696-9830-b50500e203b6",
-      name: "Deluxe Room - Best Available Rate",
-      guestsIncluded: 1,
-      adultGuestsIncluded: 1,
-      childGuestsIncluded: 0,
-      maxGuests: 1,
-      mealsIncluded: {
-        breakfast: true,
-        lunch: false,
-        dinner: false,
-        allInclusive: false,
-      },
-      pricePerNightVND: 500000,
-      pricePerNightUSD: 400,
-    },
-    {
-        ratePlanId: "07b9a897-ed07-1552017844-4696-9830-b50500e203b7",
-        name: "Deluxe Room - Premium Available Rate",
-        guestsIncluded: 1,
-        adultGuestsIncluded: 1,
-        childGuestsIncluded: 0,
-        maxGuests: 2,
-        mealsIncluded: {
-          breakfast: true,
-          lunch: false,
-          dinner: false,
-          allInclusive: true,
-        },
-        pricePerNightVND: 400000,
-        pricePerNightUSD: 300,
-      },
-  ],
-};
+const ratePackages = result?.data?.Inventories?.map((inventory) => {
+  const roomId = inventory?.RoomId;
+  const ratePackages = inventory?.RatePackages ?? [];
+  const rates = ratePackages.map((ratePackage) => {
+    const ratePlanId = ratePackage?.RatePlanId;
+    const fromDate = ratePackage?.DateRange?.From;
+    const toDate = ratePackage?.DateRange?.To;
+    const value = ratePackage?.Rate?.Amount?.Value ?? 0;
+    const currency = ratePackage?.Rate?.Amount?.Currency ?? "USD";
+
+    return {
+      ratePlanId,
+      fromDate,
+      toDate,
+      value,
+      currency,
+    };
+  });
+
+  return { roomId, rates };
+});
+
+
+console.log(JSON.stringify(ratePackages));
