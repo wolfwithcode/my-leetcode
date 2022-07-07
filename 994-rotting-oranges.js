@@ -8,11 +8,13 @@ var orangesRotting = function (grid) {
   const maxIndexOfRows = grid.length - 1;
   const maxIndexOfColumns = grid[0].length - 1;
   const startRottenOranges = [];
+  let numberOfFreshOranges = 0;
   grid.forEach((row, rowIndex) => {
     row.forEach((cell, cellIndex) => {
       const key = `${rowIndex},${cellIndex}`;
       addNode(key, cell, graphOranges);
       if (cell === 2) startRottenOranges.push(key);
+      if(cell === 1) numberOfFreshOranges++;
 
       if (cellIndex + 1 <= maxIndexOfColumns) {
         const key1 = `${rowIndex},${cellIndex + 1}`;
@@ -34,7 +36,7 @@ var orangesRotting = function (grid) {
   });
   console.log("map ", graphOranges);
   console.log("rottenOranges ", startRottenOranges);
-  return bfs(startRottenOranges, graphOranges);
+  return bfs({startRottenOranges, numberOfFreshOranges, graphOranges});
 };
 
 function addNode(node, value, map) {
@@ -51,7 +53,7 @@ function addEdge(origin, destination, map) {
   const { destinations } = map.get(origin);
   destinations.push(destination);
 }
-function bfs(startRottenOranges, graphOranges) {
+function bfs({startRottenOranges, numberOfFreshOranges, graphOranges}) {
   let numberOfMinutes = 0;
   let rottenOranges = startRottenOranges;
   while (rottenOranges.length > 0) {
@@ -63,6 +65,7 @@ function bfs(startRottenOranges, graphOranges) {
           console.log("found it! fresh orange ", destination);
           setNode(destination, 2, graphOranges);
           newRottenOranges.push(destination);
+          numberOfFreshOranges--;
         }
       }
     });
@@ -73,11 +76,11 @@ function bfs(startRottenOranges, graphOranges) {
   }
   console.log("graphOranges ", graphOranges);
 
-  for (const orange of graphOranges.entries()) {
-    const [_key, info] = orange;
-    if (info.value === 1) return -1;
-  }
-  return numberOfMinutes;
+//   for (const orange of graphOranges.entries()) {
+//     const [_key, info] = orange;
+//     if (info.value === 1) return -1;
+//   }
+  return numberOfFreshOranges ? -1 : numberOfMinutes;
 }
 
 const grid = [[2,1,1],[0,1,1],[1,0,1]];
