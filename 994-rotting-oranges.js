@@ -7,12 +7,12 @@ var orangesRotting = function (grid) {
 
   const maxIndexOfRows = grid.length - 1;
   const maxIndexOfColumns = grid[0].length - 1;
-  const rottenOranges = [];
+  const startRottenOranges = [];
   grid.forEach((row, rowIndex) => {
     row.forEach((cell, cellIndex) => {
       const key = `${rowIndex},${cellIndex}`;
       addNode(key, cell, graphOranges);
-      if (cell === 2) rottenOranges.push(key);
+      if (cell === 2) startRottenOranges.push(key);
 
       if (cellIndex + 1 <= maxIndexOfColumns) {
         const key1 = `${rowIndex},${cellIndex + 1}`;
@@ -33,8 +33,8 @@ var orangesRotting = function (grid) {
     });
   });
   console.log("map ", graphOranges);
-  console.log("rottenOranges ", rottenOranges);
-  bfs(rottenOranges, graphOranges);
+  console.log("rottenOranges ", startRottenOranges);
+  return bfs(startRottenOranges, graphOranges);
 };
 
 function addNode(node, value, map) {
@@ -51,18 +51,10 @@ function addEdge(origin, destination, map) {
   const { destinations } = map.get(origin);
   destinations.push(destination);
 }
-
-const grid = [
-  [2, 1, 1],
-  [0, 1, 1],
-  [1, 0, 1],
-];
-orangesRotting(grid);
-
 function bfs(startRottenOranges, graphOranges) {
   let numberOfMinutes = 0;
   let rottenOranges = startRottenOranges;
-  while (rottenOranges.length > 0) {   
+  while (rottenOranges.length > 0) {
     const newRottenOranges = [];
     rottenOranges.forEach((orange) => {
       const { destinations } = graphOranges.get(orange);
@@ -80,4 +72,13 @@ function bfs(startRottenOranges, graphOranges) {
     console.log("numberOfMinutes ", numberOfMinutes);
   }
   console.log("graphOranges ", graphOranges);
+
+  for (const orange of graphOranges.entries()) {
+    const [_key, info] = orange;
+    if (info.value === 1) return -1;
+  }
+  return numberOfMinutes;
 }
+
+const grid = [[2,1,1],[0,1,1],[1,0,1]];
+console.log("orangesRotting(grid) ", orangesRotting(grid));
