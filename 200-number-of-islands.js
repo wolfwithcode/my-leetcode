@@ -17,6 +17,7 @@ var numIslands = function (grid) {
     map.set(node, { isLandIndex, island, destinations });
   };
   const setNode = (node, newIsLandIndex) => {
+    console.log("newIsLandIndex ", newIsLandIndex);
     const originNode = map.get(node);
     originNode.isLandIndex = newIsLandIndex;
   };
@@ -54,6 +55,7 @@ var numIslands = function (grid) {
   });
   const visitedNodes = new Set();
   const bfs = (start, newIsLandIndex) => {
+    
     const queue = [start];   
     setNode(start, newIsLandIndex);
     visitedNodes.add(start);
@@ -76,13 +78,14 @@ var numIslands = function (grid) {
   let count = 0;
   isLandList.forEach((node) => {
     let { isLandIndex, island } = map.get(node);
-    if (isLandIndex || !island ) return;
+    if (isLandIndex || !island || visitedNodes.has(node)) return;
     count++;
+    console.log(" count ", count);
     bfs(node, count);
   });
 
   //   bfs(firstIsland);
-  console.log("map after", map);
+//   console.log("map after", map);
   return count;
 };
 
