@@ -1,0 +1,39 @@
+[
+  { "roomId": "DXTW", "roomName": "Deluxe Twin", "hotelId": "hotel1" },
+  {
+    "roomId": "JRDL",
+    "roomName": "Deluxe Sea View (DSV)",
+    "hotelId": "hotel1"
+  },
+  { "roomId": "wnroom", "roomName": "Double Bed", "hotelId": "hotel1" },
+  { "roomId": "A", "roomName": "Prem King (PKPS)", "hotelId": "hotel1" },
+  {
+    "existingMarkup": null,
+    "setting": {
+      "id": 2,
+      "key": "Global markup",
+      "value": "0.2",
+      "createdAt": "2022-07-21T14:05:14.491Z",
+      "updatedAt": "2022-07-22T01:08:08.147Z",
+      "publishedAt": "2022-07-21T14:05:17.599Z"
+    }
+  },
+  {
+    "promotions": [
+      {
+        "id": 4,
+        "room_id": "JRDL",
+        "createdAt": "2022-07-22T03:27:29.303Z",
+        "updatedAt": "2022-07-22T09:44:49.253Z",
+        "publishedAt": "2022-07-22T03:27:49.786Z",
+        "type": "PERCENTAGE",
+        "value": "8",
+        "from_date": "2022-07-12",
+        "to_date": "2022-07-30",
+        "note": "khuyen mai hau covid",
+        "is_invidual_use_only": true,
+        "priority": 2
+      }
+    ]
+  }
+]

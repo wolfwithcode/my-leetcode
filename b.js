@@ -1,0 +1,1 @@
+https://booking.halonghub.com/booking/4c849e7a-1d22-1553657044-40a6-85c8-be15c476c560?adults=1&checkin=2022-09-10&checkout=2022-09-11&children=0&hotelId=4c849e7a-1d22-1553657044-40a6-85c8-be15c476c560&itinerary=2%20Days%201%20Night&quantity=1&ratePlanId=7XFISR&roomId=28999K

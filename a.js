@@ -1,0 +1,1 @@
+https://booking.halonghub.com/booking/hotelId1111?checkin=2022-07-30&checkout=2022-07-31&itinerary=2&adults=1&children=0&rooms=1&ratePlanId=7XFISR&roomId=28999K
